@@ -2,19 +2,20 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/pages/homepage.dart';
+import 'package:flutter_catalog/pages/log_in.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key}) : super(key: null);
-
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
-      home: Homepage( ),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      darkTheme: ThemeData(brightness: Brightness.dark),
+      home: LoginPage(),
     );
   }
 }
